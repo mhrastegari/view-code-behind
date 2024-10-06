@@ -43,12 +43,12 @@
       "editor/context": [
         {
           "command": "extension.viewCode",
-          "when": "resourceExtname == .xaml",
+          "when": "resourceExtname == .xaml || resourceExtname == .razor",
           "group": "navigation"
         },
         {
           "command": "extension.viewMarkup",
-          "when": "resourceExtname == .cs",
+          "when": "resourceFilename =~ /\\.xaml\\.cs$|\\.razor\\.cs$/",
           "group": "navigation"
         }
       ]
